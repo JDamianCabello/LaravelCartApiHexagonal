@@ -45,9 +45,16 @@ abstract class RouterServiceProvider extends ServiceProvider
      * @return void
      */
     public function mapRoutes(): void{
-        Route::middleware('api')
-            ->prefix($this->prefix)
-            ->namespace($this->namespaceName)
-            ->group(base_path($this->group));
+        if ($this->exception){
+            Route::middleware('api')
+                ->prefix($this->prefix)
+                ->namespace($this->namespaceName)
+                ->group(base_path($this->group));
+        } else {
+            Route::middleware(['api', 'jwt'])
+                ->prefix($this->prefix)
+                ->namespace($this->namespaceName)
+                ->group(base_path($this->group));
+        }
     }
 }

@@ -7,8 +7,20 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
+    /**
+     * @throws \Exception
+     */
     public function index(){
-        $products = Product::all();
+        $request = Request::create(route('list-products'));
+        $request->headers->set('Authorization', env('API_KEY'));
+        $response = app()->handle($request);
+        $responseBody = json_decode($response->getContent(), true);
+
+
+        $products = collect($responseBody['message'])->map(function ($product) {
+            return (object) $product;
+        });
+
         return view('products', compact('products'));
     }
 

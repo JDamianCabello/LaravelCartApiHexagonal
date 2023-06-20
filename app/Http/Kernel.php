@@ -4,6 +4,7 @@ namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use Src\Shared\Infrastructure\Middleware\ApiMiddleware;
+use Src\Shared\Infrastructure\Middleware\AuthMiddleware;
 
 class Kernel extends HttpKernel
 {
@@ -45,7 +46,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
 
-            // Hexagonal api middleware
+            // Hexagonal middleware
             ApiMiddleware::class,
         ],
     ];
@@ -68,6 +69,9 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+
+        // Hexagonal middleware
         'api' => ApiMiddleware::class,
+        'jwt' => AuthMiddleware::class,
     ];
 }

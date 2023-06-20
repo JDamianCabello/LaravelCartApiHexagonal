@@ -196,7 +196,14 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // Hexagonal providers
+
+        // Login
         \Src\Management\Login\Infrastructure\Services\RouteServiceProvider::class,
+        \Src\Management\Login\Infrastructure\Services\DependencyServiceProvider::class,
+
+        // Product
+        \Src\Application\Product\Infrastructure\Services\RouteServiceProvider::class,
+        \Src\Application\Product\Infrastructure\Services\DependencyServiceProvider::class,
 
     ],
 

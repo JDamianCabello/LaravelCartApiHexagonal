@@ -5,7 +5,11 @@
                 <i class="fa fa-shopping-cart"></i> Carrito
                 @if(session('cart'))
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        {{ count(session('cart')) }}
+                    @php($sumProducts = 0)
+                    @foreach(session('cart') as $cartProduct)
+                        @php($sumProducts += $cartProduct['quantity'])
+                    @endforeach
+                    {{ $sumProducts }}
                     <span class="visually-hidden">Products</span>
                   </span>
                 @endif

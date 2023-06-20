@@ -11,7 +11,7 @@ abstract class Domain
     public function __construct(
         private mixed $entity = null,
         private readonly ?string $exception = null){
-        $this->exception($this->exception);
+        $this->isException($this->exception);
     }
 
     /**
@@ -22,8 +22,8 @@ abstract class Domain
     }
 
     /**
-     * @param string|null $exeption
-     * @return never
+     * @param string|null $exception
+     * @return void
      */
-    protected abstract function isException(?string $exeption): never;
+    protected abstract function isException(?string $exception): void;
 }
