@@ -209,6 +209,10 @@ return [
         \Src\API\Application\Cart\Infrastructure\Services\RouteServiceProvider::class,
         \Src\API\Application\Cart\Infrastructure\Services\DependencyServiceProvider::class,
 
+        // Payment
+        \Src\API\Payment\CartCheckout\Infrastructure\Services\RouteServiceProvider::class,
+        \Src\API\Payment\CartCheckout\Infrastructure\Services\DependencyServiceProvider::class,
+
     ],
 
     /*

@@ -18,6 +18,8 @@ final class DependencyServiceProvider extends ServiceProvider
                 'useCase' => [
                     \Src\API\Application\Cart\Application\Get\FindUserCartUseCase::class,
                     \Src\API\Application\Cart\Application\Store\StoreCartItemUseCase::class,
+                    \Src\API\Application\Cart\Application\Delete\DeleteCartItemUseCase::class,
+                    \Src\API\Application\Cart\Application\Put\ChangeCartItemQuantityUseCase::class,
                 ],
                 'contract' => \Src\API\Application\Cart\Domain\Contracts\CartRepositoryContract::class,
                 'repository' => \Src\API\Application\Cart\Infrastructure\Repositories\Eloquent\CartRepository::class

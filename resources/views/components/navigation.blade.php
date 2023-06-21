@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 fixed-top">
 
     <div class="container">
-        <a href="#" class="navbar-brand">JDamianCabello</a>
+        <a href="{{ route('home') }}" class="navbar-brand">JDamianCabello</a>
 
         <button class="navbar-toggler"
                 type="button"
