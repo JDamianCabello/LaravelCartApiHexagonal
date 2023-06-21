@@ -198,12 +198,16 @@ return [
         // Hexagonal providers
 
         // Login
-        \Src\Management\Login\Infrastructure\Services\RouteServiceProvider::class,
-        \Src\Management\Login\Infrastructure\Services\DependencyServiceProvider::class,
+        \Src\API\Management\Login\Infrastructure\Services\RouteServiceProvider::class,
+        \Src\API\Management\Login\Infrastructure\Services\DependencyServiceProvider::class,
 
         // Product
-        \Src\Application\Product\Infrastructure\Services\RouteServiceProvider::class,
-        \Src\Application\Product\Infrastructure\Services\DependencyServiceProvider::class,
+        \Src\API\Application\Product\Infrastructure\Services\RouteServiceProvider::class,
+        \Src\API\Application\Product\Infrastructure\Services\DependencyServiceProvider::class,
+
+        // Cart
+        \Src\API\Application\Cart\Infrastructure\Services\RouteServiceProvider::class,
+        \Src\API\Application\Cart\Infrastructure\Services\DependencyServiceProvider::class,
 
     ],
 

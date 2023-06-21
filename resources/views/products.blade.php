@@ -14,7 +14,7 @@
                         <h5 class="card-title">{{ $product->name }}</h5>
                         <p class="card-text">{{ $product->description }}</p>
                         <p class="fw-bold h5 text-info">{{ number_format($product->price, 2) }} €</p>
-                        <a href="{{ route('addCartItem', $product->id) }}" class="btn btn-dark mt-auto">Añadir al carrito</a>
+                        <a href="{{ route('addCartItemWeb', $product->id) }}" class="btn btn-dark mt-auto">Añadir al carrito</a>
                     </div>
                 </div>
             </div>

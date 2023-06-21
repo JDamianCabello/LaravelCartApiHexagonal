@@ -25,22 +25,16 @@ class ProductsController extends Controller
     }
 
     public function addToCart($productID){
-        $product = Product::findOrFail($productID);
+        $user = session()->get('user', []);
 
-        $cart = session()->get('cart', []);
+        $request = Request::create(route('add-cart-item'), 'POST', ['product_id' => $productID]);
+        $request->headers->set('Authorization', env('API_KEY'));
+        $request->headers->set('authentication',  $user['jwt']);
+        $response = app()->handle($request);
+        $responseBody = json_decode($response->getContent(), true);
 
-        if(isset($cart[$productID])){
-            $cart[$productID]['quantity']++;
-        }else{
-            $cart[$productID] = [
-                'name' => $product->name,
-                'image' => $product->image,
-                'price' => $product->price,
-                'quantity' => 1,
-            ];
-        }
-
-        session()->put('cart', $cart);
+        session()->forget('cart');
+        session()->put('cart', $responseBody["message"]["items"]);
         return redirect()->back()->with('success', 'Product added to cart!');
     }
 }

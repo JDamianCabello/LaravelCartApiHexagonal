@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [ProductsController::class, 'index'])->name('shop');
-Route::get('/addCartItem/{productID}', [ProductsController::class, 'addToCart'])->name('addCartItem');
+Route::get("/", function(){ return view("login"); });
+Route::post("/login", [AuthController::class, 'login'])->name('login');
+Route::get("/logout", [AuthController::class, 'logout'])->name('logout');
+Route::get('/home', [ProductsController::class, 'index'])->name('home');
+Route::get('/addCartItem/{productID}', [ProductsController::class, 'addToCart'])->name('addCartItemWeb');

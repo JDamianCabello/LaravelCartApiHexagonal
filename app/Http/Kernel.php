@@ -3,8 +3,8 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use Src\Shared\Infrastructure\Middleware\ApiMiddleware;
-use Src\Shared\Infrastructure\Middleware\AuthMiddleware;
+use Src\API\Shared\Infrastructure\Middleware\ApiMiddleware;
+use Src\API\Shared\Infrastructure\Middleware\AuthMiddleware;
 
 class Kernel extends HttpKernel
 {
