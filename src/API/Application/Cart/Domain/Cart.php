@@ -2,11 +2,18 @@
 
 namespace Src\API\Application\Cart\Domain;
 
+use Src\API\Application\Cart\Domain\Exceptions\ProductNotFoundException;
 use Src\API\Application\Cart\Domain\ValueObjects\CartID;
 use Src\API\Shared\Domain\Domain;
+use Src\API\Shared\Domain\Helper\HttpCodesDomainHelper;
 
 final class Cart extends Domain
 {
+
+    use HttpCodesDomainHelper;
+
+    private const PRODUCT_NOT_FOUND_EXCEPTION = 'PRODUCT_NOT_FOUND';
+
 
     /**
      * @var array
@@ -44,7 +51,11 @@ final class Cart extends Domain
      */
     protected function isException(?string $exception): void
     {
-        // TODO: Implement isException() method.
+        if(!is_null($exception)){
+            match ($exception){
+                self::PRODUCT_NOT_FOUND_EXCEPTION => throw new ProductNotFoundException("Product not found", $this->badRequest())
+            };
+        }
     }
 
     /**

@@ -1,0 +1,898 @@
+{
+	"info": {
+		"_postman_id": "c6368f7d-339b-4301-b46f-8ba303f11694",
+		"name": "ShoppingCart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "a17d9c12-2403-437f-b2a9-7033c1a1d004",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MTkwMDAyLCJleHAiOjE2ODcxOTM2MDIsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.Tl6lP9k1niNGqC9aeH2KvUC4xg0rlNrAwwgdH1S5jwQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"root@root.es\",\n    \"password\": \"root\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MTkwMDAyLCJleHAiOjE2ODcxOTM2MDIsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.Tl6lP9k1niNGqC9aeH2KvUC4xg0rlNrAwwgdH1S5jwQ",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"root@root.es\",\n    \"password\": \"root\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 17:34:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 17:34:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"error\": false,\n    \"message\": {\n        \"id\": 1,\n        \"username\": \"root\",\n        \"email\": \"root@root.es\",\n        \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MzY4ODc1LCJleHAiOjE2ODczNzI0NzUsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.L_MfaLp71CxUo_dFUvfYPkjR2rimw-T2BY3m0hjAxmU\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "List products",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "a17d9c12-2403-437f-b2a9-7033c1a1d004",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 17:35:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 17:35:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"error\": false,\n    \"message\": [\n        {\n            \"id\": 1,\n            \"name\": \"Camiseta de manga corta\",\n            \"description\": \"Camiseta ligera y transpirable, perfecta para entrenamientos intensos. Te mantendrá fresco y cómodo durante tus sesiones de ejercicio.\",\n            \"image\": \"1.jpeg\",\n            \"price\": 10.99,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Pantalones cortos de entrenamiento\",\n            \"description\": \"Pantalones cortos ajustados que te brindan libertad de movimiento y comodidad. Ideales para correr, hacer ejercicios de alta intensidad o entrenamientos en el gimnasio.\",\n            \"image\": \"2.jpg\",\n            \"price\": 19.99,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Sudadera con capucha\",\n            \"description\": \"Sudadera de tela suave y cálida con capucha ajustable. Perfecta para mantenerte abrigado antes y después de tus entrenamientos.\",\n            \"image\": \"3.jpeg\",\n            \"price\": 14.5,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Leggings de compresión\",\n            \"description\": \"Leggings de alta compresión que ofrecen soporte muscular y mejoran la circulación sanguínea. Proporcionan comodidad y ayudan a reducir la fatiga muscular.\",\n            \"image\": \"4.jpg\",\n            \"price\": 8.75,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Chaqueta cortavientos\",\n            \"description\": \"Chaqueta ligera y resistente al viento, ideal para actividades al aire libre. Te protegerá del viento y la lluvia ligera durante tus carreras o paseos en bicicleta.\",\n            \"image\": \"5.jpeg\",\n            \"price\": 24.99,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Top deportivo\",\n            \"description\": \"Top de sujeción media/alta, diseñado para brindar soporte durante actividades de alto impacto. Perfecto para correr, hacer ejercicios de cardio o practicar deportes de impacto.\",\n            \"image\": \"6.jpeg\",\n            \"price\": 12.49,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Pantalones de yoga\",\n            \"description\": \"Pantalones suaves y elásticos, ideales para practicar yoga o pilates. Te ofrecen libertad de movimiento y comodidad durante tus sesiones de estiramiento y flexibilidad.\",\n            \"image\": \"7.jpeg\",\n            \"price\": 9.99,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Calcetines deportivos\",\n            \"description\": \"Calcetines acolchados y transpirables que proporcionan comodidad y evitan la fricción. Ideales para correr, hacer senderismo o cualquier actividad deportiva.\",\n            \"image\": \"8.jpeg\",\n            \"price\": 17.25,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Camiseta de compresión\",\n            \"description\": \"Camiseta ajustada de compresión que favorece la circulación sanguínea y ayuda a reducir la fatiga muscular. Ideal para entrenamientos de alta intensidad.\",\n            \"image\": \"9.jpeg\",\n            \"price\": 13.99,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Gorra deportiva\",\n            \"description\": \"Gorra ligera y transpirable con visera curva. Te protege del sol y te mantiene fresco durante tus actividades al aire libre.\",\n            \"image\": \"10.jpeg\",\n            \"price\": 7.5,\n            \"created_at\": \"2023-06-21T10:56:23.000000Z\",\n            \"updated_at\": \"2023-06-21T10:56:23.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add to cart",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "a17d9c12-2403-437f-b2a9-7033c1a1d004",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MzYzNDQ0LCJleHAiOjE2ODczNjcwNDQsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.PoZWUcEuxnqh54QwOmYQLQrU3HweTyw6fGNM4xZP4-Q",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cart/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add to cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MzYzNDQ0LCJleHAiOjE2ODczNjcwNDQsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.PoZWUcEuxnqh54QwOmYQLQrU3HweTyw6fGNM4xZP4-Q",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\" : 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/cart/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"cart",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 16:05:09 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 16:05:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"error\": false,\n    \"message\": {\n        \"items\": [\n            {\n                \"product_id\": 8,\n                \"quantity\": 2,\n                \"name\": \"Calcetines deportivos\",\n                \"description\": \"Calcetines acolchados y transpirables que proporcionan comodidad y evitan la fricción. Ideales para correr, hacer senderismo o cualquier actividad deportiva.\",\n                \"image\": \"8.jpeg\",\n                \"price\": 17.25\n            },\n            {\n                \"product_id\": 10,\n                \"quantity\": 1,\n                \"name\": \"Gorra deportiva\",\n                \"description\": \"Gorra ligera y transpirable con visera curva. Te protege del sol y te mantiene fresco durante tus actividades al aire libre.\",\n                \"image\": \"10.jpeg\",\n                \"price\": 7.5\n            },\n            {\n                \"product_id\": 1,\n                \"quantity\": 2,\n                \"name\": \"Camiseta de manga corta\",\n                \"description\": \"Camiseta ligera y transpirable, perfecta para entrenamientos intensos. Te mantendrá fresco y cómodo durante tus sesiones de ejercicio.\",\n                \"image\": \"1.jpeg\",\n                \"price\": 10.99\n            },\n            {\n                \"product_id\": 3,\n                \"quantity\": 16,\n                \"name\": \"Sudadera con capucha\",\n                \"description\": \"Sudadera de tela suave y cálida con capucha ajustable. Perfecta para mantenerte abrigado antes y después de tus entrenamientos.\",\n                \"image\": \"3.jpeg\",\n                \"price\": 14.5\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetCart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "GetCart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MzYzNDQ0LCJleHAiOjE2ODczNjcwNDQsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.PoZWUcEuxnqh54QwOmYQLQrU3HweTyw6fGNM4xZP4-Q",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/cart/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"cart",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 16:05:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 16:05:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"error\": false,\n    \"message\": {\n        \"items\": [\n            {\n                \"product_id\": 8,\n                \"quantity\": 2,\n                \"name\": \"Calcetines deportivos\",\n                \"description\": \"Calcetines acolchados y transpirables que proporcionan comodidad y evitan la fricción. Ideales para correr, hacer senderismo o cualquier actividad deportiva.\",\n                \"image\": \"8.jpeg\",\n                \"price\": 17.25\n            },\n            {\n                \"product_id\": 10,\n                \"quantity\": 1,\n                \"name\": \"Gorra deportiva\",\n                \"description\": \"Gorra ligera y transpirable con visera curva. Te protege del sol y te mantiene fresco durante tus actividades al aire libre.\",\n                \"image\": \"10.jpeg\",\n                \"price\": 7.5\n            },\n            {\n                \"product_id\": 1,\n                \"quantity\": 2,\n                \"name\": \"Camiseta de manga corta\",\n                \"description\": \"Camiseta ligera y transpirable, perfecta para entrenamientos intensos. Te mantendrá fresco y cómodo durante tus sesiones de ejercicio.\",\n                \"image\": \"1.jpeg\",\n                \"price\": 10.99\n            },\n            {\n                \"product_id\": 3,\n                \"quantity\": 16,\n                \"name\": \"Sudadera con capucha\",\n                \"description\": \"Sudadera de tela suave y cálida con capucha ajustable. Perfecta para mantenerte abrigado antes y después de tus entrenamientos.\",\n                \"image\": \"3.jpeg\",\n                \"price\": 14.5\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete item from cart",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "a17d9c12-2403-437f-b2a9-7033c1a1d004",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MzYzNDQ0LCJleHAiOjE2ODczNjcwNDQsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.PoZWUcEuxnqh54QwOmYQLQrU3HweTyw6fGNM4xZP4-Q",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cart/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete item from cart",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MzYzNDQ0LCJleHAiOjE2ODczNjcwNDQsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.PoZWUcEuxnqh54QwOmYQLQrU3HweTyw6fGNM4xZP4-Q",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\" : 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/cart/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"cart",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 16:06:24 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 16:06:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"error\": false,\n    \"message\": {\n        \"items\": [\n            {\n                \"product_id\": 8,\n                \"quantity\": 2,\n                \"name\": \"Calcetines deportivos\",\n                \"description\": \"Calcetines acolchados y transpirables que proporcionan comodidad y evitan la fricción. Ideales para correr, hacer senderismo o cualquier actividad deportiva.\",\n                \"image\": \"8.jpeg\",\n                \"price\": 17.25\n            },\n            {\n                \"product_id\": 10,\n                \"quantity\": 1,\n                \"name\": \"Gorra deportiva\",\n                \"description\": \"Gorra ligera y transpirable con visera curva. Te protege del sol y te mantiene fresco durante tus actividades al aire libre.\",\n                \"image\": \"10.jpeg\",\n                \"price\": 7.5\n            },\n            {\n                \"product_id\": 3,\n                \"quantity\": 16,\n                \"name\": \"Sudadera con capucha\",\n                \"description\": \"Sudadera de tela suave y cálida con capucha ajustable. Perfecta para mantenerte abrigado antes y después de tus entrenamientos.\",\n                \"image\": \"3.jpeg\",\n                \"price\": 14.5\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change item quantity",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "a17d9c12-2403-437f-b2a9-7033c1a1d004",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MzY4ODc1LCJleHAiOjE2ODczNzI0NzUsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.L_MfaLp71CxUo_dFUvfYPkjR2rimw-T2BY3m0hjAxmU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : 2,\n    \"quantity\": -1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cart/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3MzY4ODc1LCJleHAiOjE2ODczNzI0NzUsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.L_MfaLp71CxUo_dFUvfYPkjR2rimw-T2BY3m0hjAxmU",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\" : 2,\n    \"quantity\": -1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/cart/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"cart",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 17:35:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 17:35:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"error\": false,\n    \"message\": {\n        \"items\": [\n            {\n                \"product_id\": 2,\n                \"quantity\": 7,\n                \"name\": \"Pantalones cortos de entrenamiento\",\n                \"description\": \"Pantalones cortos ajustados que te brindan libertad de movimiento y comodidad. Ideales para correr, hacer ejercicios de alta intensidad o entrenamientos en el gimnasio.\",\n                \"image\": \"2.jpg\",\n                \"price\": 19.99\n            },\n            {\n                \"product_id\": 5,\n                \"quantity\": 4,\n                \"name\": \"Chaqueta cortavientos\",\n                \"description\": \"Chaqueta ligera y resistente al viento, ideal para actividades al aire libre. Te protegerá del viento y la lluvia ligera durante tus carreras o paseos en bicicleta.\",\n                \"image\": \"5.jpeg\",\n                \"price\": 24.99\n            },\n            {\n                \"product_id\": 6,\n                \"quantity\": 1,\n                \"name\": \"Top deportivo\",\n                \"description\": \"Top de sujeción media/alta, diseñado para brindar soporte durante actividades de alto impacto. Perfecto para correr, hacer ejercicios de cardio o practicar deportes de impacto.\",\n                \"image\": \"6.jpeg\",\n                \"price\": 12.49\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Checkout",
+			"item": [
+				{
+					"name": "Checkout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/checkout/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"checkout",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Checkout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWF0IjoxNjg3Mzc0NTMzLCJleHAiOjE2ODczNzgxMzMsImF1ZiI6ImQxMGEzMGMyMmZhZWMxY2EwNmY2ZjJiMWRkN2JmM2FlYTNkYWVkMDEiLCJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJlbWFpbCI6InJvb3RAcm9vdC5lcyJ9fV0.l-E5T9X4LyA9X5mPqXoEkVDa8xery88ry6MwJbOBNNE",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\" : 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/checkout/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"checkout",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 19:09:27 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 19:09:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "51"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"error\": false,\n    \"message\": {\n        \"payed\": true,\n        \"payed_at\": \"2023-06-21 19:09:27\",\n        \"order_id\": \"64934ae788cff\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

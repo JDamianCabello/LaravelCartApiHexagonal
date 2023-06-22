@@ -2,7 +2,6 @@
 
 namespace Src\API\Application\Cart\Infrastructure\Repositories\Eloquent;
 
-use Illuminate\Support\Facades\DB;
 use Src\API\Application\Cart\Domain\Cart;
 use Src\API\Application\Cart\Domain\Contracts\CartRepositoryContract;
 use Src\API\Application\Cart\Domain\ValueObjects\CartID;
@@ -45,6 +44,7 @@ final class CartRepository implements CartRepositoryContract
      */
     public function addToCart(CartID $userCart, ProductID $productID): Cart
     {
+        $this->checkProductExist($productID);
         $cartItem = new CartItem();
 
         $findItemCart = $cartItem::firstOrCreate([
@@ -67,6 +67,7 @@ final class CartRepository implements CartRepositoryContract
      */
     public function deleteFromCart(CartID $userCart, ProductID $productID): Cart
     {
+        $this->checkProductExist($productID);
         $cartItem = new CartItem();
         $cartItem::where([
             'cart_id' =>  $userCart->value(),
@@ -99,6 +100,7 @@ final class CartRepository implements CartRepositoryContract
      */
     public function changeItemQuantity(CartID $userCart, ProductID $productID, QuantityValueObject $quantity): Cart
     {
+        $this->checkProductExist($productID);
         $cartItem = new CartItem();
         $userCartItem = $cartItem::where([
             'cart_id' =>  $userCart->value(),
@@ -106,7 +108,6 @@ final class CartRepository implements CartRepositoryContract
         ])->first();
 
         $userCartItem->quantity += $quantity->value();
-        //dd($userCartItem,$userCartItem->quantity, $userCartItem->quantity = 0);
 
         if($userCartItem->quantity <= 0){
             $userCartItem->delete();
@@ -115,5 +116,15 @@ final class CartRepository implements CartRepositoryContract
         }
 
         return $this->getCartByCartID($userCart);
+    }
+
+    private function checkProductExist(ProductID $productID)
+    {
+        $product = new Product();
+        $check = $product::find($productID->value());
+
+        if(!$check){
+            return new Cart(null, 'PRODUCT_NOT_FOUND');
+        }
     }
 }
