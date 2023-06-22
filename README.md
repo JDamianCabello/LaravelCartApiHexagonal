@@ -1,66 +1,96 @@
+# Laravel Cart API
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Qué es Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Laravel es un framework de código abierto para desarrollar aplicaciones y servicios web con PHP 5, PHP 7 y PHP 8. Su filosofía es desarrollar código PHP de forma elegante y simple, evitando el "código espagueti". Fue creado en 2011 y tiene una gran influencia de frameworks como Ruby on Rails, Sinatra y ASP .NET MVC.​
 
-## About Laravel
+## El problema:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Como parte de la plataforma necesitamos diseñar una cesta de la compra que permita a todas aquellas personas interesadas en productos de deporte poder comprar de forma eficiente y rápida.
+sE por ello, que el equipo de desarrollo ha decidido que la mejor manera de implementarlo se partir de una API. Tu misión consiste en iniciar el desarrollo de ese carrito.
+### Requerimientos
+Necesitamos que el carrito sea capaz de hacer todo esto:
+- Gestión de productos eficiente que permita: añadir, actualizar y eliminar productos del carrito.
+- Obtener el número total de productos en el carrito. - Confirmar al compra de carrito.
+  Como vas a ser quién inicie le desarrollo del carrito, el diseño se libre a tu elección. Y is tienes dudas específicas no dudes en preguntarnos.
+### Qué valoramos? Por este orden:
+- Código limpio, simple y fácil de entender.
+- Consideramos el testing un factor clave al momento de desarrollar nuevo código. Es necesario lograr
+  una máxima cobertura de los casos de uso.
+- El time to market para nosotros es fundamental. Eso significa que valoramos por encima de muchos
+  otros factores que la solución sea simple y sobretodo **fácil de mantener**.
+- Performance, performance y por si no lo habíamos mencionado performance :). Aclaración: No nos sirve
+  una solución que tiene muy buena performance pero que nadie más del equipo va a saber tocar o que al curva de aprendizaje va a ser muy pronunciada. Así que ahi vas a tener que balancear.
+- No valoramos la UI.
+- Nos da igual qué framework uses, siempre y cuando el dominio esté desacoplado del mismo.Como parte de la plataforma necesitamos diseñar una cesta de la compra que permita a todas aquellas personas interesadas en productos de deporte poder comprar de forma e fi c i e n t e y rápida. Por ello, que el equipo de desarrollo ha decidido que la mejor manera de implementarlo se partir de una API. Tu misión consiste en iniciar el desarrollo de ese carrito.
+### Requerimientos
+Necesitamos que el carrito sea capaz de hacer todo esto:
+- Gestión de productos eficiente que permita: añadir, actualizar y eliminar productos del carrito.
+- Obtener el número total de productos en el carrito. - Confirmar al compra de carrito.
+  Como vas a ser quién inicie le desarrollo del carrito, el diseño se libre a tu elección. Y is tienes dudas específicas no dudes en preguntarnos.
+## Qué valoramos? Por este orden:
+- Código limpio, simple y fácil de entender.
+- Consideramos el testing un factor clave al momento de desarrollar nuevo código. Es necesario lograr
+  una máxima cobertura de los casos de uso.
+- El time to market para nosotros es fundamental. Eso significa que valoramos por encima de muchos
+  otros factores que la solución sea simple y sobretodo **fácil de mantener**.
+- Performance, performance y por si no lo habíamos mencionado performance :). Aclaración: No nos sirve
+  una solución que tiene muy buena performance pero que nadie más del equipo va a saber tocar o que al curva de aprendizaje va a ser muy pronunciada. Así que ahi vas a tener que balancear.
+- No valoramos la UI.
+- Nos da igual qué framework uses, siempre y cuando el dominio esté desacoplado del mismo.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Instalar el proyecto
+Para instalar el proyecto es necesario clonar el repositorio si tienes git instalado (esto es opcional, puedes descargarlo [aquí](https://git-scm.com/downloads)) en el pc o puedes descargar el .zip desde [aquí](https://github.com/JDamianCabello/LaravelCartApiHexagonal/archive/refs/heads/master.zip).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+El comando para clonar el repositorio (en caso de no descargar el .zip) desde la consola es:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    git https://github.com/JDamianCabello/LaravelCartApiHexagonal.git
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+De una forma u otra tendrás una carpeta llamada **LaravelCartApiHexagonal-master**
 
-## Laravel Sponsors
+Para ejecutar los comandos de PHP, necesitas tener PHP instalado, según tu plataforma puedes seguir un tutorial u otro:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+|[Windows](https://code.tutsplus.com/es/tutorials/how-to-install-php-on-windows--cms-35435)|[Linux](https://www.scriptcase.net/docs/es_es/v9/manual/02-scriptcase-installation/06-linux_php/)|[Mac](https://www.neoguias.com/instalar-php-macos/)|
+|--|--|--|
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Una vez instalado PHP, necesitamos instalar composer, esto se puede hacer [desde su web](https://getcomposer.org/doc/00-intro.md). Donde también encontraremos información de uso e instalación.
 
-## Contributing
+Con todo listo entramos dentro de la carpeta, abrimos un terminal/cmd y usamos el comando de composer para instalar las dependencias:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    composer install
 
-## Code of Conduct
+Se instalaran todas las dependencias necesarias para ejecutar la api. Una vez acabada la instalación usaremos el comando de laravel para ejecutar el servidor local:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    php artisan serve
 
-## Security Vulnerabilities
+Con esto tendremos el servidor en local para probar la api en la url [127.0.0.1:8000/api/"](http://127.0.0.1:8000/api/)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+En caso de querer usar el front es necesario instalar las dependencias de JavaScript utilizando npm o yarn. Si no tienes npm o yarn instalado, asegúrate de descargar e instalar Node.js antes de continuar.
 
-## License
+    npm install   # o yarn install
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Ahora, puedes iniciar el servidor de desarrollo para el proyecto PHP utilizando Vite. Ejecuta el siguiente comando:
+
+    npm run dev   # o yarn dev
+
+
+## FAQ
+
+- La api necesita un API_KEY de conexión el cual está hardcoded en el .env, ese token es el siguiente (se puede cambiar por el que se quiera):
+
+  API_KEY=a17d9c12-2403-437f-b2a9-7033c1a1d004
+
+- El usuario y la contraseña por defecto para iniciar sesión son:
+
+> - Email: root@root.es
+    >     - password: root
+
+- Para setear los datos en la base de datos deberemos usar el comando **php artisan database:seed**
+
+- Si tienes problemas con la base de datos, dentro del proyecto vamos a la carpeta `storage/database`, dentro de la misma encontraremos un fichero llamado `database.sqlite`.
+
+  Eliminamos el fichero y creamos un nuevo fichero llamado igual **database.sqlite** y ejecutamos en el terminal/cmd el comando que nos crea la estructura de tablas en la base de datos el cual es: **`php artisan migrate`**.
+
